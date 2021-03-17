@@ -19,6 +19,6 @@ export const MENU_ITEMS: NbMenuItem[] = [
   {
     title: 'Inventory Management',
     icon: 'home-outline',
-    link: '/pages/inventory',
+    link: '/main/inventory',
   },
 ];
