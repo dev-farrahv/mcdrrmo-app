@@ -4,7 +4,7 @@ import { LocalDataSource } from 'ng2-smart-table';
 @Component({
   selector: 'ngx-report',
   templateUrl: './report.component.html',
-  styleUrls: ['./report.component.scss']
+  styleUrls: ['./report.component.scss'],
 })
 
 
@@ -44,8 +44,8 @@ export class ReportComponent implements OnInit {
         title: 'Age',
         type: 'number',
       },
-    }
-  }
+    },
+  };
 
   source: LocalDataSource = new LocalDataSource();
   constructor() { }
