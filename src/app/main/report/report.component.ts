@@ -5,11 +5,10 @@ import { SmartTableData } from '../../@core/data/smart-table';
 @Component({
   selector: 'ngx-report',
   templateUrl: './report.component.html',
-  styleUrls: ['./report.component.scss']
+  styleUrls: ['./report.component.scss'],
 })
 export class ReportComponent {
   settings = {
-  
     columns: {
       id: {
         title: 'ID',

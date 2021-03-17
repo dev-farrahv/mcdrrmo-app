@@ -24,7 +24,7 @@ import { ReportComponent } from './report/report.component';
   declarations: [
     PagesComponent,
     InventoryComponent,
-    ReportComponent
+    ReportComponent,
   ],
 })
 
