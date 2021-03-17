@@ -16,4 +16,9 @@ export const MENU_ITEMS: NbMenuItem[] = [
     icon: 'home-outline',
     link: '/pages/iot-dashboard',
   },
+  {
+    title: 'Inventory Management',
+    icon: 'home-outline',
+    link: '/pages/inventory',
+  },
 ];
