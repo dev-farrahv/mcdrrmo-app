@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { NbMenuModule } from '@nebular/theme';
+import { NbMenuModule, NbSelectModule } from '@nebular/theme';
 import { NbCardModule, NbIconModule, NbInputModule, NbTreeGridModule } from '@nebular/theme';
 import { ThemeModule } from '../@theme/theme.module';
 import { PagesComponent } from './pages.component';
@@ -7,6 +7,7 @@ import { DashboardModule } from './dashboard/dashboard.module';
 import { PagesRoutingModule } from './pages-routing.module';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { InventoryComponent } from './inventory/inventory.component';
+import { ReportComponent } from './report/report.component';
 @NgModule({
   imports: [
     PagesRoutingModule,
@@ -18,10 +19,12 @@ import { InventoryComponent } from './inventory/inventory.component';
     NbIconModule,
     NbInputModule,
     Ng2SmartTableModule,
+    NbSelectModule,
   ],
   declarations: [
     PagesComponent,
-    InventoryComponent
+    InventoryComponent,
+    ReportComponent
   ],
 })
 

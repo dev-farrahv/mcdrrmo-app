@@ -8,13 +8,13 @@ export const MENU_ITEMS: NbMenuItem[] = [
   {
     title: 'Dashboard',
     icon: 'layout-outline',
-    link: '/pages/dashboard',
+    link: '/main/dashboard',
     home: true,
   },
   {
     title: 'Reports Management',
     icon: 'home-outline',
-    link: '/pages/iot-dashboard',
+    link: '/main/report',
   },
   {
     title: 'Inventory Management',
