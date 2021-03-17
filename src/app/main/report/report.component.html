@@ -1,0 +1,20 @@
+<div class="col">
+    <div class="col-md-12">
+        <nb-card class="inline-form-card">
+            <nb-card-header>Reports</nb-card-header>
+            <nb-card-body>
+                <div class="form-group row">
+                    <label for="inputEmail1" class="fs-4 p-2 col-form-label">Filter by :</label>
+                    <nb-select selected="0">
+                        <nb-option value="0">Select Option</nb-option>
+                        <nb-option value="1">Option 1</nb-option>
+                        <nb-option value="2">Option 2</nb-option>
+                    </nb-select>
+                </div>
+
+                <ng2-smart-table [settings]="settings" [source]="source" (deleteConfirm)="onDeleteConfirm($event)">
+                </ng2-smart-table>
+            </nb-card-body>
+        </nb-card>
+    </div>
+</div>
