@@ -41,33 +41,33 @@ export class ReportComponent {
 
   data = [
     {
-      category: 'Traffic',
+      category: "Traffic",
       brgy: "Sucat",
       subject: "Car",
-      dateIncident: "March, 2, 2021"
+      dateIncident: "March, 2, 2021",
     },
     {
-      category: 'Drugs',
+      category: "Drugs",
       brgy: "Cupang",
       subject: "People",
-      dateIncident: "March, 2, 2021"
+      dateIncident: "March, 2, 2021",
     },
     {
-      category: 'Violators',
+      category: "Violators",
       brgy: "Alabang",
       subject: "Motor",
-      dateIncident: "March, 2, 2021"
-    }
-  ]
+      dateIncident: "March, 2, 2021",
+    },
+  ];
   source: LocalDataSource = new LocalDataSource();
 
   constructor(
-    private dialogService: NbDialogService
+    private dialogService: NbDialogService,
   ) {
     this.source.load(this.data);
   }
 
-  addReport(){
+  addReport() {
     this.dialogService.open(AddReportComponent, {
       dialogClass: 'add-report',
       closeOnBackdropClick: false,

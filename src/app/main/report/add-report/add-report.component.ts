@@ -10,7 +10,7 @@ import { NbDialogRef } from '@nebular/theme';
 export class AddReportComponent implements OnInit {
 
   constructor(
-    protected ref: NbDialogRef<AddReportComponent>
+    protected ref: NbDialogRef<AddReportComponent>,
   ) { }
 
   ngOnInit(): void {
