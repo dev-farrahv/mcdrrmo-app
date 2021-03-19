@@ -41,22 +41,22 @@ export class ReportComponent {
 
   data = [
     {
-      category: "Traffic",
-      brgy: "Sucat",
-      subject: "Car",
-      dateIncident: "March, 2, 2021",
+      category: 'Traffic',
+      brgy: 'Sucat',
+      subject: 'Car',
+      dateIncident: 'March, 2, 2021',
     },
     {
-      category: "Drugs",
-      brgy: "Cupang",
-      subject: "People",
-      dateIncident: "March, 2, 2021",
+      category: 'Drugs',
+      brgy: 'Cupang',
+      subject: 'People',
+      dateIncident: 'March, 2, 2021',
     },
     {
-      category: "Violators",
-      brgy: "Alabang",
-      subject: "Motor",
-      dateIncident: "March, 2, 2021",
+      category: 'Violators',
+      brgy: 'Alabang',
+      subject: 'Motor',
+      dateIncident: 'March, 2, 2021',
     },
   ];
   source: LocalDataSource = new LocalDataSource();
