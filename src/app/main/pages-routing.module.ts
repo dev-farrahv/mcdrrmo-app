@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { InventoryComponent } from './inventory/inventory.component';
+import { ReportComponent } from './report/report.component';
 
 
 const routes: Routes = [{
@@ -15,8 +16,8 @@ const routes: Routes = [{
       component: DashboardComponent,
     },
     {
-      path: 'iot-dashboard',
-      component: DashboardComponent,
+      path: 'report',
+      component: ReportComponent,
     },
     {
       path: 'inventory',

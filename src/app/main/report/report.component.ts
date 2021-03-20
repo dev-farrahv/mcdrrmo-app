@@ -1,56 +1,78 @@
 import { Component, OnInit } from '@angular/core';
+import { NbComponentStatus, NbDialogService } from '@nebular/theme';
 import { LocalDataSource } from 'ng2-smart-table';
+import { SmartTableData } from '../../@core/data/smart-table';
+import { AddReportComponent } from './add-report/add-report.component';
 
 @Component({
   selector: 'ngx-report',
   templateUrl: './report.component.html',
   styleUrls: ['./report.component.scss'],
 })
-
-
-export class ReportComponent implements OnInit {
-  setting = {
-    edit: {
-      editButtonContent: '<i class="nb-edit"></i>',
-      saveButtonContent: '<i class="nb-checkmark"></i>',
-      cancelButtonContent: '<i class="nb-close"></i>',
-    },
-    delete: {
-      deleteButtonContent: '<i class="nb-trash"></i>',
-      confirmDelete: true,
-    },
+export class ReportComponent {
+  settings = {
     columns: {
-      id: {
-        title: 'ID',
-        type: 'number',
-      },
-      firstName: {
-        title: 'First Name',
+
+      category: {
+        title: 'Category',
         type: 'string',
       },
-      lastName: {
-        title: 'Last Name',
+      brgy: {
+        title: 'Barangay',
         type: 'string',
       },
-      username: {
-        title: 'Username',
+      subject: {
+        title: 'Subject',
         type: 'string',
       },
-      email: {
-        title: 'E-mail',
+      dateIncident: {
+        title: 'Date of Incident',
         type: 'string',
-      },
-      age: {
-        title: 'Age',
-        type: 'number',
       },
     },
+    actions: {
+      add: false,
+      edit: false,
+      delete: false,
+      position: 'right',
+    },
+
   };
 
+  data = [
+    {
+      category: 'Traffic',
+      brgy: 'Sucat',
+      subject: 'Car',
+      dateIncident: 'March, 2, 2021',
+    },
+    {
+      category: 'Drugs',
+      brgy: 'Cupang',
+      subject: 'People',
+      dateIncident: 'March, 2, 2021',
+    },
+    {
+      category: 'Violators',
+      brgy: 'Alabang',
+      subject: 'Motor',
+      dateIncident: 'March, 2, 2021',
+    },
+  ];
   source: LocalDataSource = new LocalDataSource();
-  constructor() { }
 
-  ngOnInit(): void {
+  constructor(
+    private dialogService: NbDialogService,
+  ) {
+    this.source.load(this.data);
   }
+
+  addReport() {
+    this.dialogService.open(AddReportComponent, {
+      dialogClass: 'add-report',
+      closeOnBackdropClick: false,
+    });
+  }
+
 
 }
