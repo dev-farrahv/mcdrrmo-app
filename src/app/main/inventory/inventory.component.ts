@@ -29,28 +29,20 @@ export class InventoryComponent  {
     },
     columns: {
       id: {
-        title: 'ID',
-        type: 'number',
+        title: 'Category',
+        type: 'String',
       },
       firstName: {
-        title: 'First Name',
+        title: 'Brgy',
         type: 'string',
       },
       lastName: {
-        title: 'Last Name',
-        type: 'string',
+        title: 'Date',
+        type: 'Status',
       },
       username: {
-        title: 'Username',
+        title: 'Status',
         type: 'string',
-      },
-      email: {
-        title: 'E-mail',
-        type: 'string',
-      },
-      age: {
-        title: 'Age',
-        type: 'number',
       },
     },
   };

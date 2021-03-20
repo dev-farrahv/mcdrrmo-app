@@ -1,9 +1,26 @@
 <nb-card>
     <nb-card-header>
-      Smart Table
+      Inventory Table
     </nb-card-header>
   
     <nb-card-body>
+      <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1" class="label">Filter By:</label> <br>
+          <nb-select selected="0">
+            <nb-option value="0">--- Category ---</nb-option>
+            <nb-option value="1">Vehicle</nb-option>
+            <nb-option value="2">Human Resources</nb-option>
+            <nb-option value="3">Others</nb-option>
+          </nb-select> <br> <br>
+          <nb-select selected="0">
+            <nb-option value="0">--- Brgy ---</nb-option>
+            <nb-option value="1">Cupang</nb-option>
+            <nb-option value="2">Tunasan</nb-option>
+            <nb-option value="3">Alabang</nb-option>
+          </nb-select>
+        </div>
+      </form>
       <ng2-smart-table [settings]="settings" [source]="source" (deleteConfirm)="onDeleteConfirm($event)">
       </ng2-smart-table>
     </nb-card-body>
