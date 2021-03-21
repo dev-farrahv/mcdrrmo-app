@@ -1,0 +1,56 @@
+<div class="col">
+    <div class="col-md-12">
+        <nb-card class="inline-form-card">
+            <nb-card-header>Reports</nb-card-header>
+            <nb-card-body>
+                <div class="form-group row d-flex justify-content-between">
+                    <div>
+                        <label for="inputEmail1" class="fs-4 p-2 col-form-label">Filter by :</label>
+                        <nb-select selected="0">
+                            <nb-option value="0">Select Option</nb-option>
+                            <nb-option value="1">Option 1</nb-option>
+                            <nb-option value="2">Option 2</nb-option>
+                        </nb-select>
+                    </div>
+
+                    <div>
+                        <div class="form-group row">
+                            <label for="inputPassword" class="col-sm-2 col-form-label">Search: </label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="search" placeholder="Search...">
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div class="form-group row d-flex justify-content-between">
+                    <div>
+                        <label for="inputEmail1" class="fs-4 p-2 col-form-label">Filter by :</label>
+                        <nb-select selected="0">
+                            <nb-option value="0">Select Option</nb-option>
+                            <nb-option value="1">Option 1</nb-option>
+                            <nb-option value="2">Option 2</nb-option>
+                        </nb-select>
+                    </div>
+
+                    <div class="d-flex justify-content-evenly">
+                        <button nbButton hero status="primary" class="mr-2" (click)="addReport()">Add Report</button>
+                        <button nbButton hero status="primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-download" viewBox="0 0 16 16">
+                                <path
+                                    d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+                                <path
+                                    d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <ng2-smart-table [settings]="settings" [source]="source"></ng2-smart-table>
+            </nb-card-body>
+        </nb-card>
+    </div>
+</div>
