@@ -1,0 +1,134 @@
+<nb-card>
+    <nb-card-header>Add User</nb-card-header>
+    <nb-card-body>
+
+        <div class="row">
+            <div class="col-md-12 col-lg-12">
+              <nb-card size="small">
+                <nb-tabset>
+                  <nb-tab tabTitle="User Information">
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group row">
+                                <label for="inputPassword" class="col-sm-4 col-form-label">First Name: </label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="search" placeholder="First Name">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group row">
+                                <label for="inputPassword" class="col-sm-5 col-form-label">Middle Name: </label>
+                                <div class="col-sm-7">
+                                    <input type="text" class="form-control" id="search" placeholder="Middle Name">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group row">
+                                <label for="inputPassword" class="col-sm-4 col-form-label">Last Name: </label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="search" placeholder="Last Name">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-8">
+                            <div class="form-group row">
+                                <label for="inputPassword" class="col-sm-2 col-form-label">Address: </label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="search" placeholder="Address">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group row">
+                                <label for="inputPassword" class="col-sm-4 col-form-label"> Birthdate: </label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="search" placeholder="Birthdate">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group row">
+                                <label for="inputPassword" class="col-sm-4 col-form-label">Mobile No.: </label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="search" placeholder="Mobile No.">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group row">
+                                <label for="inputPassword" class="col-sm-5 col-form-label">Email Address: </label>
+                                <div class="col-sm-7">
+                                    <input type="text" class="form-control" id="search" placeholder="Email Address">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group row">
+                                <label for="inputPassword" class="col-sm-4 col-form-label">Date Hired: </label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="search" placeholder="Date Hired">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group row">
+                                <label for="inputPassword" class="col-sm-4 col-form-label">Brgy Station: </label>
+                                <div class="col-sm-8">
+                                    <nb-select selected="0">
+                                        <nb-option value="0"> Please Select </nb-option>
+                                        <nb-option value="1"> Cupang </nb-option>
+                                        <nb-option value="2"> Alabang </nb-option>
+                                        <nb-option value="3"> Poblacion </nb-option>
+                                    </nb-select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group row">
+                                <label for="inputPassword" class="col-sm-4 col-form-label">Position: </label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="search" placeholder="Position">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group row">
+                                <label for="inputPassword" class="col-sm-4 col-form-label"> Role: </label>
+                                <div class="col-sm-8">
+                                    <nb-select selected="0">
+                                        <nb-option value="0"> Please Select </nb-option>
+                                        <nb-option value="1"> Admin </nb-option>
+                                        <nb-option value="2"> Standard User </nb-option>
+                                    </nb-select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                  </nb-tab>
+                  <nb-tab tabTitle="User Access">
+                    <span>Content #2</span>
+                  </nb-tab>
+                </nb-tabset>
+              </nb-card>
+            </div>
+        </div>
+          
+    </nb-card-body>
+    <nb-card-footer>
+        <button nbButton hero status="primary" (click)="dismiss()">Close</button>
+    </nb-card-footer>
+</nb-card>

@@ -17,11 +17,15 @@ import {
   NbSelectModule,
   NbUserModule,
   NbTreeGridModule,
-  NbMenuModule
+  NbMenuModule,
+  NbTabsetModule
 } from '@nebular/theme';
+
 import { ReportComponent } from './report/report.component';
 import { AddReportComponent } from './report/add-report/add-report.component';
 import { AddInventoryComponent } from './inventory/add-inventory/add-inventory.component';
+import { ManageusersComponent } from './manageusers/manageusers.component';
+import { AddUsersComponent } from './manageusers/add-users/add-users.component';
 @NgModule({
   imports: [
     PagesRoutingModule,
@@ -39,6 +43,7 @@ import { AddInventoryComponent } from './inventory/add-inventory/add-inventory.c
     NbDatepickerModule,
     NbButtonModule,
     NbInputModule,
+    NbTabsetModule
   ],
   declarations: [
     PagesComponent,
@@ -46,6 +51,8 @@ import { AddInventoryComponent } from './inventory/add-inventory/add-inventory.c
     ReportComponent,
     AddReportComponent,
     AddInventoryComponent,
+    ManageusersComponent,
+    AddUsersComponent,
   ],
 })
 

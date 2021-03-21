@@ -5,6 +5,8 @@ import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { InventoryComponent } from './inventory/inventory.component';
 import { ReportComponent } from './report/report.component';
+import { ManageusersComponent } from './manageusers/manageusers.component';
+
 
 
 const routes: Routes = [{
@@ -18,6 +20,10 @@ const routes: Routes = [{
     {
       path: 'report',
       component: ReportComponent,
+    },
+    {
+      path: 'manageusers',
+      component: ManageusersComponent,
     },
     {
       path: 'inventory',
