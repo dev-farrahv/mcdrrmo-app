@@ -17,7 +17,9 @@ import {
   NbSelectModule,
   NbUserModule,
   NbTreeGridModule,
-  NbMenuModule
+  NbMenuModule,
+  NbTimepickerModule,
+  NB_TIME_PICKER_CONFIG
 } from '@nebular/theme';
 import { ReportComponent } from './report/report.component';
 import { AddReportComponent } from './report/add-report/add-report.component';
@@ -39,6 +41,7 @@ import { AddInventoryComponent } from './inventory/add-inventory/add-inventory.c
     NbDatepickerModule,
     NbButtonModule,
     NbInputModule,
+    NbTimepickerModule
   ],
   declarations: [
     PagesComponent,
@@ -47,6 +50,12 @@ import { AddInventoryComponent } from './inventory/add-inventory/add-inventory.c
     AddReportComponent,
     AddInventoryComponent,
   ],
+  providers: [
+    {
+      provide: NB_TIME_PICKER_CONFIG,
+      useValue:{}
+    }
+  ]
 })
 
 export class PagesModule {

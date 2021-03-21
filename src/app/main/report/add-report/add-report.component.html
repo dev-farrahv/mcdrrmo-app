@@ -12,18 +12,47 @@
             </div>
             <div class="col">
                 <div class="form-group row">
-                    <label for="inputPassword" class="col-sm-2 col-form-label">Date of Incident: </label>
+                    <label for="inputPassword" class="col-sm-4 col-form-label">Date of Incident: </label>
+                    <div class="col-sm-8">
+                        <input class="form-control" placeholder="Select Date" [nbDatepicker]="formpicker">
+                        <nb-datepicker #formpicker></nb-datepicker>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-group row">
+                    <label for="inputPassword" class="col-sm-2 col-form-label">Category: </label>
                     <div class="col-sm-10">
+                        <input type="text" class="form-control" id="search" placeholder="Search...">
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group row">
+                    <label for="inputPassword" class="col-sm-4 col-form-label">Specify : </label>
+                    <div class="col-sm-8">
                         <input type="text" class="form-control" id="search" placeholder="Search...">
                     </div>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col">
                 <div class="form-group row">
-                    <label for="inputPassword" class="col-sm-2 col-form-label">Category: </label>
-                    <div class="col-sm-10">
+                    <label for="inputPassword" class="col-sm-1 col-form-label">Brgy: </label>
+                    <div class="col-sm-11">
+                        <input type="text" class="form-control" id="search" placeholder="Search...">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-group row">
+                    <label for="inputPassword" class="col-sm-1 col-form-label">Address: </label>
+                    <div class="col-sm-11">
                         <input type="text" class="form-control" id="search" placeholder="Search...">
                     </div>
                 </div>
@@ -32,15 +61,31 @@
         <div class="row">
             <div class="col-md-12">
                 <label for="inputPassword" class="col-form-label">Summary Report: </label>
-                <textarea rows="5" nbInput fullWidth shape="rectangle" placeholder="Text Area"></textarea>
+                <textarea rows="5" class="form-control" fullWidth shape="rectangle" placeholder="Text Area"></textarea>
             </div>
         </div>
         <div class="row">
             <div class="col-md-12">
                 <label for="inputPassword" class="col-form-label">File Upload: </label>
-                <div class="border h-50 p-4">
-                    Upload
+                <div class="border p-4">
+                    <div class="border-dotted p-4" (click)="handleClick()">
+                        <div class="d-flex justify-content-center" *ngIf="imageUrl.length; else NoImage">
+                            <div class="row" *ngFor="let image of imageUrl">
+                                <div class="column p-4">
+                                    <div>
+                                        <img [src]="image.type">
+                                    </div>
+                                    <div class="font-weight-light text-wrap" style="width: 6rem; font-size: 12px;">{{image.name}}</div>
+                                </div>
+                            </div>
+                        </div>
+                        <ng-template #NoImage>
+                            <div class="align-middle">Upload</div>
+                        </ng-template>
+                        <input class="hidden" type="file" id="upload-file" name="upload-file"
+                            accept=".csv , .pdf, .docs" ngf-max-size="2MB" (change)="addAttachment($event)" hidden>
                     </div>
+                </div>
             </div>
         </div>
 

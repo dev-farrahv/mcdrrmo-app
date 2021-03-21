@@ -1,7 +1,19 @@
 .add-report{
+    
     width: 50%;
-   
+    height: 70vh;
+    overflow: auto;
+  
+    img{
+        height: 80px !important;
+        width: 70px !important;
+    } 
 }
 .cdk-overlay-pane{
     display: inline !important;
+}
+
+.border-dotted{
+    border-style: dotted;
+    border-color: rgb(175, 172, 172);
 }
