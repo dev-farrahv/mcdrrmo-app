@@ -2,9 +2,9 @@
 
 import { Component } from '@angular/core';
 import { LocalDataSource } from 'ng2-smart-table';
-
+import { NbComponentStatus, NbDialogService } from '@nebular/theme';
 import { SmartTableData } from '../../@core/data/smart-table';
-
+import { AddInventoryComponent } from './add-inventory/add-inventory.component';
 @Component({
   selector: 'ngx-inventory',
   templateUrl: './inventory.component.html',
@@ -49,10 +49,11 @@ export class InventoryComponent  {
 
   source: LocalDataSource = new LocalDataSource();
 
-  constructor(private service: SmartTableData) {
+  constructor(private service: SmartTableData, private dialogService: NbDialogService) {
     const data = this.service.getData();
     this.source.load(data);
   }
+
 
   onDeleteConfirm(event): void {
     if (window.confirm('Are you sure you want to delete?')) {
@@ -60,5 +61,11 @@ export class InventoryComponent  {
     } else {
       event.confirm.reject();
     }
+  }
+  addReport() {
+    this.dialogService.open(AddInventoryComponent, {
+      dialogClass: 'add-inventory',
+      closeOnBackdropClick: false,
+    });
   }
 }

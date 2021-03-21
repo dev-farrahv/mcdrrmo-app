@@ -21,6 +21,7 @@ import {
 } from '@nebular/theme';
 import { ReportComponent } from './report/report.component';
 import { AddReportComponent } from './report/add-report/add-report.component';
+import { AddInventoryComponent } from './inventory/add-inventory/add-inventory.component';
 @NgModule({
   imports: [
     PagesRoutingModule,
@@ -44,6 +45,7 @@ import { AddReportComponent } from './report/add-report/add-report.component';
     InventoryComponent,
     ReportComponent,
     AddReportComponent,
+    AddInventoryComponent,
   ],
 })
 
