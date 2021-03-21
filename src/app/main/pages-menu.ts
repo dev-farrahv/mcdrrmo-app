@@ -21,4 +21,9 @@ export const MENU_ITEMS: NbMenuItem[] = [
     icon: 'home-outline',
     link: '/main/inventory',
   },
+  {
+    title: 'Manage Users',
+    icon: 'home-outline',
+    link: '/main/manageusers',
+  },
 ];
