@@ -1,0 +1,51 @@
+<nb-card>
+    <nb-card-header>Report Incident</nb-card-header>
+    <nb-card-body>
+        <div class="row">
+            <div class="col">
+                <div class="form-group row">
+                    <label for="inputPassword" class="col-sm-2 col-form-label">Subject: </label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="search" placeholder="Search...">
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group row">
+                    <label for="inputPassword" class="col-sm-2 col-form-label">Date of Incident: </label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="search" placeholder="Search...">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group row">
+                    <label for="inputPassword" class="col-sm-2 col-form-label">Category: </label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="search" placeholder="Search...">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <label for="inputPassword" class="col-form-label">Summary Report: </label>
+                <textarea rows="5" nbInput fullWidth shape="rectangle" placeholder="Text Area"></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <label for="inputPassword" class="col-form-label">File Upload: </label>
+                <div class="border h-50 p-4">
+                    Upload
+                    </div>
+            </div>
+        </div>
+
+    </nb-card-body>
+    <nb-card-footer>
+        <button nbButton hero status="primary" (click)="dismiss()">Close</button>
+    </nb-card-footer>
+</nb-card>
