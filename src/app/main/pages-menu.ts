@@ -6,24 +6,28 @@ export const MENU_ITEMS: NbMenuItem[] = [
     group: true,
   },
   {
-    title: 'Dashboard',
-    icon: 'layout-outline',
+    title: 'Dashboard Analytics',
+    icon: 'bar-chart-outline',
     link: '/main/dashboard',
     home: true,
   },
   {
     title: 'Reports Management',
-    icon: 'home-outline',
+    icon: 'file-text-outline',
     link: '/main/report',
   },
   {
     title: 'Inventory Management',
-    icon: 'home-outline',
+    icon: 'list-outline',
     link: '/main/inventory',
   },
   {
     title: 'Manage Users',
-    icon: 'home-outline',
+    icon: 'people-outline',
     link: '/main/manageusers',
   },
+  // {
+  //   title: 'Login',
+  //   link: '/auth/login',
+  // },
 ];

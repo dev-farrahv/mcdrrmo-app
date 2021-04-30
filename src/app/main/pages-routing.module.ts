@@ -6,7 +6,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { InventoryComponent } from './inventory/inventory.component';
 import { ReportComponent } from './report/report.component';
 import { ManageusersComponent } from './manageusers/manageusers.component';
-
+import { ECommerceComponent } from './e-commerce/e-commerce.component';
+import {
+  NbLoginComponent
+} from '@nebular/auth';
 
 
 const routes: Routes = [{
@@ -15,6 +18,10 @@ const routes: Routes = [{
   children: [
     {
       path: 'dashboard',
+      component: ECommerceComponent,
+    },
+    {
+      path: 'iot-dashboard',
       component: DashboardComponent,
     },
     {
@@ -33,6 +40,10 @@ const routes: Routes = [{
       path: '',
       redirectTo: 'dashboard',
       pathMatch: 'full',
+    },
+    {
+      path: '/auth/login',
+      component: NbLoginComponent,
     },
     {
       path: '**',
