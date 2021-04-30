@@ -2,14 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { NbComponentStatus, NbDialogService } from '@nebular/theme';
 import { LocalDataSource } from 'ng2-smart-table';
 import { SmartTableData } from '../../@core/data/smart-table';
-import { AddReportComponent } from './add-report/add-report.component';
+import { PinLocationComponent } from './pin-location/pin-location.component';
 
 @Component({
-  selector: 'ngx-report',
-  templateUrl: './report.component.html',
-  styleUrls: ['./report.component.scss'],
+  selector: 'ngx-locator',
+  templateUrl: './locator.component.html',
+  styleUrls: ['./locator.component.scss'],
 })
-export class ReportComponent {
+export class LocatorComponent {
   settings = {
     columns: {
 
@@ -82,7 +82,7 @@ export class ReportComponent {
   }
 
   addReport() {
-    this.dialogService.open(AddReportComponent, {
+    this.dialogService.open(PinLocationComponent, {
       dialogClass: 'add-report',
       closeOnBackdropClick: false,
     });

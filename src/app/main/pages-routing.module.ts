@@ -7,6 +7,7 @@ import { InventoryComponent } from './inventory/inventory.component';
 import { ReportComponent } from './report/report.component';
 import { ManageusersComponent } from './manageusers/manageusers.component';
 import { ECommerceComponent } from './e-commerce/e-commerce.component';
+import { LocatorComponent } from './locator/locator.component';
 import {
   NbLoginComponent
 } from '@nebular/auth';
@@ -35,6 +36,10 @@ const routes: Routes = [{
     {
       path: 'inventory',
       component: InventoryComponent,
+    },
+    {
+      path: 'locator',
+      component: LocatorComponent,
     },
     {
       path: '',

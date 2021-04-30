@@ -29,11 +29,11 @@ export class InventoryComponent  {
     },
     columns: {
       id: {
-        title: 'Category',
+        title: 'Type',
         type: 'String',
       },
       firstName: {
-        title: 'Brgy',
+        title: 'Baranggay',
         type: 'string',
       },
       lastName: {
@@ -41,7 +41,11 @@ export class InventoryComponent  {
         type: 'Status',
       },
       username: {
-        title: 'Status',
+        title: 'Assigned to',
+        type: 'string',
+      },
+      email: {
+        title: 'Qty',
         type: 'string',
       },
     },

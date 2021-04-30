@@ -26,6 +26,11 @@ export const MENU_ITEMS: NbMenuItem[] = [
     icon: 'people-outline',
     link: '/main/manageusers',
   },
+  {
+    title: 'Locator',
+    icon: 'map-outline',
+    link: '/main/locator',
+  },
   // {
   //   title: 'Login',
   //   link: '/auth/login',

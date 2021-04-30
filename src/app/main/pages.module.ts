@@ -37,6 +37,8 @@ import { ReportComponent } from './report/report.component';
 import { AddReportComponent } from './report/add-report/add-report.component';
 import { AddInventoryComponent } from './inventory/add-inventory/add-inventory.component';
 import { ManageusersComponent } from './manageusers/manageusers.component';
+import { LocatorComponent } from './locator/locator.component';
+import { PinLocationComponent } from './locator/pin-location/pin-location.component';
 import { AddUsersComponent } from './manageusers/add-users/add-users.component';
 import { ECommerceComponent } from './e-commerce/e-commerce.component';
 import { ProfitCardComponent } from './e-commerce/profit-card/profit-card.component';
@@ -111,6 +113,8 @@ import { OrdersChartComponent } from './e-commerce/charts-panel/charts/orders-ch
     AddReportComponent,
     AddInventoryComponent,
     ManageusersComponent,
+    LocatorComponent,
+    PinLocationComponent,
     AddUsersComponent,
     ECommerceComponent,
     ProfitCardComponent,

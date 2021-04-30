@@ -1,0 +1,56 @@
+<nb-card>
+    <nb-card-header>Pin Location</nb-card-header>
+    <nb-card-body>
+        <div class="row">
+            <div class="col">
+                <div class="form-group row">
+                    <label for="inputPassword" class="col-sm-2 col-form-label"> Type: </label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="search" placeholder="Incident...">
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group row">
+                    <label for="inputPassword" class="col-sm-4 col-form-label"> Subject: </label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="search" placeholder="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-group row">
+                    <label for="inputPassword" class="col-sm-1 col-form-label">Complete Address: </label>
+                    <div class="col-sm-11">
+                        <input type="text" class="form-control" id="search" placeholder="Search...">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-group row">
+                    <label for="inputPassword" class="col-sm-2 col-form-label"> Latitude: </label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" disabled id="search" placeholder="13.232342">
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group row">
+                    <label for="inputPassword" class="col-sm-4 col-form-label"> Longitude: </label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" disabled id="search" placeholder="14.234234">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </nb-card-body>
+    <nb-card-footer>
+        <button nbButton hero status="primary" (click)="dismiss()">Pin</button>
+    </nb-card-footer>
+</nb-card>
