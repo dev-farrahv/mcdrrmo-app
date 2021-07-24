@@ -1,6 +1,6 @@
 import { ModuleWithProviders, NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NbAuthModule, NbDummyAuthStrategy } from '@nebular/auth';
+import { NbAuthModule, NbDummyAuthStrategy, NbPasswordAuthStrategy } from '@nebular/auth';
 import { NbSecurityModule, NbRoleProvider } from '@nebular/security';
 import { of as observableOf } from 'rxjs';
 
@@ -106,18 +106,79 @@ export const NB_CORE_PROVIDERS = [
   ...NbAuthModule.forRoot({
 
     strategies: [
-      NbDummyAuthStrategy.setup({
+      NbPasswordAuthStrategy.setup({
         name: 'email',
-        delay: 3000,
+        token: {
+          key: 'data.access_token'
+        },
+        baseEndpoint: 'http://localhost:4200',
+        login: {
+          endpoint: '/user/tokenbybody',
+          method: 'post'
+        },
+        register: {
+          endpoint: '/user/create',
+          method: 'post'
+        },
+        logout: {
+          endpoint: '/user/logout',
+          method: 'post'
+        },        
+        resetPass: {
+          endpoint: '/password/changepassword',
+          method: 'post'
+        }
       }),
     ],
     forms: {
       login: {
-        socialLinks: socialLinks,
+        redirectDelay : 500,
+        strategy: 'email',
+        rememberMe: false,
+        showMessages: {
+          success: true,
+          error: true,
+        },
+        redirect: {
+          success: '/',
+          failure: null,
+        }
+        //socialLinks: socialLinks,
       },
       register: {
+        redirectDelay : 500,
+        strategy: 'email',
+        rememberMe: false,
+        showMessages: {
+          success: true,
+          error: true,
+        },
+        terms: true
+        // socialLinks: socialLinks,
+      },
+      resetPassword:{
+        redirectDelay : 500,
+        strategy: 'email',
+        rememberMe: false,
+        showMessages: {
+          success: true,
+          error: true,
+        },
         socialLinks: socialLinks,
       },
+      logout: {
+        redirectDelay : 500,
+        strategy: 'email',
+      },
+      validation: {
+        password: {
+          required: true,
+          minLength : 8
+        },
+        email: {
+          required: true
+        }
+      }
     },
   }).providers,
 
