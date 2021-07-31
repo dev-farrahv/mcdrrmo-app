@@ -79,6 +79,7 @@ import { ChartPanelSummaryComponent } from './e-commerce/charts-panel/chart-pane
 import { SlideOutComponent } from './e-commerce/slide-out/slide-out.component';
 import { ProfitChartComponent } from './e-commerce/charts-panel/charts/profit-chart.component';
 import { OrdersChartComponent } from './e-commerce/charts-panel/charts/orders-chart.component';
+import { GooglePlaceModule } from 'ngx-google-places-autocomplete';
 
 @NgModule({
   imports: [
@@ -105,6 +106,7 @@ import { OrdersChartComponent } from './e-commerce/charts-panel/charts/orders-ch
     NgxEchartsModule,
     NgxChartsModule,
     LeafletModule,
+    GooglePlaceModule
   ],
   declarations: [
     PagesComponent,

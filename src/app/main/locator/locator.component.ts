@@ -3,82 +3,33 @@ import { NbComponentStatus, NbDialogService } from '@nebular/theme';
 import { LocalDataSource } from 'ng2-smart-table';
 import { SmartTableData } from '../../@core/data/smart-table';
 import { PinLocationComponent } from './pin-location/pin-location.component';
+import { Loader } from '@googlemaps/js-api-loader';
 
 @Component({
   selector: 'ngx-locator',
   templateUrl: './locator.component.html',
   styleUrls: ['./locator.component.scss'],
 })
-export class LocatorComponent {
-  settings = {
-    columns: {
+export class LocatorComponent implements OnInit {
+  title = 'google-maps';
 
-      category: {
-        title: 'Category',
-        type: 'string',
-      },
-      brgy: {
-        title: 'Barangay',
-        type: 'string',
-      },
-      subject: {
-        title: 'Subject',
-        type: 'string',
-      },
-      dateIncident: {
-        title: 'Date of Incident',
-        type: 'string',
-      },
-    },
-    actions: {
-      add: false,
-      edit: false,
-      delete: false,
-      position: 'right',
-    },
-    add: {
-      addButtonContent: '<i class="nb-plus"></i>',
-      createButtonContent: '<i class="nb-checkmark"></i>',
-      cancelButtonContent: '<i class="nb-close"></i>',
-    },
-    edit: {
-      editButtonContent: '<i class="nb-edit" ></i>',
-      saveButtonContent: '<i class="nb-checkmark"></i>',
-      cancelButtonContent: '<i class="nb-close"></i>',
-    },
-    delete: {
-      deleteButtonContent: '<i class="nb-trash"></i>',
-      confirmDelete: true,
-    },
+  ngOnInit(): void {
+    let loader = new Loader({
+      apiKey: 'AIzaSyDJuGI2GbrLsV3WTU5FxXAMW5VLYGuHdh0'
+    })
 
-  };
-
-  data = [
-    {
-      category: 'Mass Intoxication',
-      brgy: 'Sucat',
-      subject: 'Car',
-      dateIncident: 'March, 2, 2021',
-    },
-    {
-      category: 'Earhquake',
-      brgy: 'Cupang',
-      subject: 'People',
-      dateIncident: 'March, 2, 2021',
-    },
-    {
-      category: 'Fire Incident',
-      brgy: 'Alabang',
-      subject: 'Motor',
-      dateIncident: 'March, 2, 2021',
-    },
-  ];
-  source: LocalDataSource = new LocalDataSource();
-
+    loader.load().then(() => {
+      new google.maps.Map(document.getElementById("map"),{
+        center: {lat: 14.314604, lng: 121.113747 },
+        zoom: 15
+      })
+    })
+  }
+  
   constructor(
     private dialogService: NbDialogService,
   ) {
-    this.source.load(this.data);
+    
   }
 
   addReport() {
