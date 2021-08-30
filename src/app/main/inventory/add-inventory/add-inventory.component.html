@@ -1,29 +1,50 @@
-<nb-card>
-    <nb-card-header>Report Incident</nb-card-header>
+<nb-card >
+    <nb-card-header>Add Resources</nb-card-header>
     <nb-card-body>
         <div class="row">
             <div class="col">
                 <div class="form-group row">
-                    <label for="inputPassword" class="col-sm-2 col-form-label">Subject: </label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="search" placeholder="Search...">
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="form-group row">
-                    <label for="inputPassword" class="col-sm-2 col-form-label">Date of Incident: </label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="search" placeholder="Search...">
+                    <label for="inputPassword" class="col-sm-4 col-form-label">Brgy/Office: </label>
+                    <div class="col-sm-8">
+                        <nb-select selected="0">
+                            <nb-option value="0"> MCDRRMO Office </nb-option>
+                            <nb-option value="1">Cupang</nb-option>
+                            <nb-option value="2">Poblacion</nb-option>
+                            <nb-option value="3">Putatan</nb-option>
+                            <nb-option value="3">Alabang</nb-option>
+                            <nb-option value="3">Ayala-alabang</nb-option>
+                            <nb-option value="3">Tunasan</nb-option>
+                            <nb-option value="3">Bayanan</nb-option>
+                            <nb-option value="3">Buli</nb-option>
+                            <nb-option value="3">Sucat</nb-option>
+                        </nb-select>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col">
                 <div class="form-group row">
-                    <label for="inputPassword" class="col-sm-2 col-form-label">Category: </label>
-                    <div class="col-sm-10">
+                    <label for="inputPassword" class="col-sm-4 col-form-label"> Resource Type: </label>
+                    <div class="col-sm-8">
+                        <nb-select selected="0">
+                            <nb-option value="0"> Type </nb-option>
+                            <nb-option value="1"> Vehicle </nb-option>
+                            <nb-option value="2"> Mobile </nb-option>
+                            <nb-option value="2"> Firetruck </nb-option>
+                            <nb-option value="2"> Ambulance </nb-option>
+                            <nb-option value="2"> Hazard suits </nb-option>
+                            <nb-option value="3"> Others </nb-option>
+                        </nb-select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="form-group row">
+                    <label for="inputPassword" class="col-sm-4 col-form-label"> Assigned To: </label>
+                    <div class="col-sm-8">
                         <input type="text" class="form-control" id="search" placeholder="Search...">
                     </div>
                 </div>
@@ -31,18 +52,11 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <label for="inputPassword" class="col-form-label">Summary Report: </label>
+                <label for="inputPassword" class="col-form-label">Description: </label>
                 <textarea rows="5" nbInput fullWidth shape="rectangle" placeholder="Text Area"></textarea>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-12">
-                <label for="inputPassword" class="col-form-label">File Upload: </label>
-                <div class="border h-50 p-4">
-                    Upload
-                    </div>
-            </div>
-        </div>
+
 
     </nb-card-body>
     <nb-card-footer>

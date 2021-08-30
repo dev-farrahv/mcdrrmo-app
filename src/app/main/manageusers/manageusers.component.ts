@@ -3,6 +3,7 @@ import { NbComponentStatus, NbDialogService } from '@nebular/theme';
 import { LocalDataSource } from 'ng2-smart-table';
 import { SmartTableData } from '../../@core/data/smart-table';
 import { AddUsersComponent } from './add-users/add-users.component';
+import { User, UserService } from '../../shared/services/user.service';
 
 @Component({
   selector: 'ngx-manageusers',
@@ -72,6 +73,7 @@ export class ManageusersComponent {
 
   constructor(
     private dialogService: NbDialogService,
+    private userService: UserService
   ) {
     this.source.load(this.data);
   }
@@ -82,6 +84,16 @@ export class ManageusersComponent {
       closeOnBackdropClick: false,
     });
   }
+
+  ngOnInit() {
+    console.log("hi");
+    console.log(this.userService.getuser);
+
+    this.userService.getuser().subscribe((res) => {
+      console.log(res);
+    });
+  }
+
 
 
 }

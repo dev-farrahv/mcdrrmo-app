@@ -11,6 +11,11 @@ import { CoreModule } from './@core/core.module';
 import { ThemeModule } from './@theme/theme.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { environment } from '../environments/environment';
+
 import {
   NbChatModule,
   NbDatepickerModule,
@@ -24,6 +29,9 @@ import {
 @NgModule({
   declarations: [AppComponent],
   imports: [
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
+    AngularFirestoreModule,
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
@@ -38,7 +46,7 @@ import {
       messageGoogleMapKey: 'AIzaSyA_wNuCzia92MAmdLRzmqitRGvCF7wCZPY',
     }),
     CoreModule.forRoot(),
-    ThemeModule.forRoot(),
+    ThemeModule.forRoot()
   ],
   bootstrap: [AppComponent],
 })
