@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { NbDialogRef } from '@nebular/theme';
+import { User, UserService } from '../../../shared/services/user.service';
+
 
 @Component({
   selector: 'ngx-add-users',
@@ -8,8 +10,25 @@ import { NbDialogRef } from '@nebular/theme';
   encapsulation: ViewEncapsulation.None
 })
 export class AddUsersComponent implements OnInit {
-
+  user: User = {
+    FirstName: '',
+    MiddleName: '',
+    LastName: '',
+    Address: '',
+    BirthDate: '',
+    MobileNumber: '',
+    EmailAddress: '',
+    DateHired: '',
+    Station: 0,
+    Position: '',
+    Role: '',
+    MobileOnly: false,
+    WebAdmin: false,
+    LocatorAccess: false,
+  };
+  
   constructor(
+    private userService: UserService,
     protected ref: NbDialogRef<AddUsersComponent>
   ) { }
 
@@ -18,6 +37,27 @@ export class AddUsersComponent implements OnInit {
 
   dismiss() {
     this.ref.close();
+  }
+
+  async submitUser() {
+    this.userService.addUser(this.user).then(() => {
+      this.user = {
+        FirstName: '',
+        MiddleName: '',
+        LastName: '',
+        Address: '',
+        BirthDate: '',
+        MobileNumber: '',
+        EmailAddress: '',
+        DateHired: '',
+        Station: 0,
+        Position: '',
+        Role: '',
+        MobileOnly: false,
+        WebAdmin: false,
+        LocatorAccess: false
+      };
+    });
   }
 
   tabs: any[] = [

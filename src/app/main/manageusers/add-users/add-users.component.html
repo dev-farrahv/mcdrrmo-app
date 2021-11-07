@@ -13,7 +13,7 @@
                             <div class="form-group row">
                                 <label for="inputPassword" class="col-sm-4 col-form-label">First Name: </label>
                                 <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="search" placeholder="First Name">
+                                    <input type="text" class="form-control" id="FirstName"  [(ngModel)]="user.FirstName" placeholder="First Name">
                                 </div>
                             </div>
                         </div>
@@ -21,7 +21,7 @@
                             <div class="form-group row">
                                 <label for="inputPassword" class="col-sm-5 col-form-label">Middle Name: </label>
                                 <div class="col-sm-7">
-                                    <input type="text" class="form-control" id="search" placeholder="Middle Name">
+                                    <input type="text" class="form-control" id="MiddleName" [(ngModel)]="user.MiddleName" placeholder="Middle Name">
                                 </div>
                             </div>
                         </div>
@@ -29,7 +29,7 @@
                             <div class="form-group row">
                                 <label for="inputPassword" class="col-sm-4 col-form-label">Last Name: </label>
                                 <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="search" placeholder="Last Name">
+                                    <input type="text" class="form-control" id="LastName" [(ngModel)]="user.LastName" placeholder="Last Name">
                                 </div>
                             </div>
                         </div>
@@ -40,7 +40,7 @@
                             <div class="form-group row">
                                 <label for="inputPassword" class="col-sm-2 col-form-label">Address: </label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="search" placeholder="Address">
+                                    <input type="text" class="form-control" id="Address" [(ngModel)]="user.Address" placeholder="Address">
                                 </div>
                             </div>
                         </div>
@@ -48,7 +48,7 @@
                             <div class="form-group row">
                                 <label for="inputPassword" class="col-sm-4 col-form-label"> Birthdate: </label>
                                 <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="search" placeholder="Birthdate">
+                                    <input type="text" class="form-control" id="BirthDate" [(ngModel)]="user.BirthDate"  placeholder="Birthdate">
                                 </div>
                             </div>
                         </div>
@@ -59,7 +59,7 @@
                             <div class="form-group row">
                                 <label for="inputPassword" class="col-sm-4 col-form-label">Mobile No.: </label>
                                 <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="search" placeholder="Mobile No.">
+                                    <input type="text" class="form-control" id="MobileNumber" [(ngModel)]="user.MobileNumber" placeholder="Mobile No.">
                                 </div>
                             </div>
                         </div>
@@ -67,7 +67,7 @@
                             <div class="form-group row">
                                 <label for="inputPassword" class="col-sm-5 col-form-label">Email Address: </label>
                                 <div class="col-sm-7">
-                                    <input type="text" class="form-control" id="search" placeholder="Email Address">
+                                    <input type="text" class="form-control" id="EmailAddress" [(ngModel)]="user.EmailAddress" placeholder="Email Address">
                                 </div>
                             </div>
                         </div>
@@ -75,7 +75,7 @@
                             <div class="form-group row">
                                 <label for="inputPassword" class="col-sm-4 col-form-label">Date Hired: </label>
                                 <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="search" placeholder="Date Hired">
+                                    <input type="text" class="form-control" id="DateHired" [(ngModel)]="user.DateHired" placeholder="Date Hired">
                                 </div>
                             </div>
                         </div>
@@ -86,18 +86,18 @@
                             <div class="form-group row">
                                 <label for="inputPassword" class="col-sm-4 col-form-label">Office/Brgy Station: </label>
                                 <div class="col-sm-8">
-                                    <nb-select selected="0">
+                                    <nb-select selected="0" id="Station" [(ngModel)]="user.Station">
                                         <nb-option value="0"> Please Select </nb-option>
-                                        <nb-option value="0"> MCDRRMO Office </nb-option>
-                                        <nb-option value="1">Cupang</nb-option>
-                                        <nb-option value="2">Poblacion</nb-option>
-                                        <nb-option value="3">Putatan</nb-option>
+                                        <nb-option value="1"> MCDRRMO Office </nb-option>
                                         <nb-option value="3">Alabang</nb-option>
-                                        <nb-option value="3">Ayala-alabang</nb-option>
-                                        <nb-option value="3">Tunasan</nb-option>
-                                        <nb-option value="3">Bayanan</nb-option>
-                                        <nb-option value="3">Buli</nb-option>
-                                        <nb-option value="3">Sucat</nb-option>
+                                        <nb-option value="4">Ayala-alabang</nb-option>
+                                        <nb-option value="5">Bayanan</nb-option>
+                                        <nb-option value="6">Buli</nb-option>
+                                        <nb-option value="7">Cupang</nb-option>
+                                        <nb-option value="8">Poblacion</nb-option>
+                                        <nb-option value="9">Putatan</nb-option>
+                                        <nb-option value="10">Sucat</nb-option>
+                                        <nb-option value="11">Tunasan</nb-option>
                                     </nb-select>
                                 </div>
                             </div>
@@ -106,7 +106,7 @@
                             <div class="form-group row">
                                 <label for="inputPassword" class="col-sm-4 col-form-label">Position: </label>
                                 <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="search" placeholder="Position">
+                                    <input type="text" class="form-control" id="Position" [(ngModel)]="user.Position" placeholder="Position">
                                 </div>
                             </div>
                         </div>
@@ -114,10 +114,10 @@
                             <div class="form-group row">
                                 <label for="inputPassword" class="col-sm-4 col-form-label"> Role: </label>
                                 <div class="col-sm-8">
-                                    <nb-select selected="0">
+                                    <nb-select selected="0" id="Role" [(ngModel)]="user.Role">
                                         <nb-option value="0"> Please Select </nb-option>
-                                        <nb-option value="1"> Admin </nb-option>
-                                        <nb-option value="2"> Standard User </nb-option>
+                                        <nb-option value="admin"> Admin </nb-option>
+                                        <nb-option value="standarduser"> Standard User </nb-option>
                                     </nb-select>
                                 </div>
                             </div>
@@ -127,7 +127,21 @@
                     
                   </nb-tab>
                   <nb-tab tabTitle="User Access">
-                    <span>Content #2</span>
+                    <div class="col">
+                        <div class="form-group row">
+                            <nb-checkbox name="MobileOnly" [(ngModel)]="user.MobileOnly" > Mobile Only </nb-checkbox>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group row">
+                            <nb-checkbox name="WebAdmin" [(ngModel)]="user.WebAdmin"> Web Admin </nb-checkbox>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group row">
+                            <nb-checkbox name="LocatorAccess" [(ngModel)]="user.LocatorAccess"> Locator Access </nb-checkbox>
+                        </div>
+                    </div>
                   </nb-tab>
                 </nb-tabset>
               </nb-card>
@@ -136,6 +150,7 @@
           
     </nb-card-body>
     <nb-card-footer>
-        <button nbButton hero status="primary" (click)="dismiss()">Close</button>
+        <button class="cancel" nbButton status="danger" (click)="dismiss()">Cancel</button>
+        <button nbButton status="success"  (click)="submitUser()">Submit</button>
     </nb-card-footer>
 </nb-card>

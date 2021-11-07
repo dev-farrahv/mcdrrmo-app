@@ -106,7 +106,8 @@ import { GooglePlaceModule } from 'ngx-google-places-autocomplete';
     NgxEchartsModule,
     NgxChartsModule,
     LeafletModule,
-    GooglePlaceModule
+    GooglePlaceModule,
+    ngFormsModule
   ],
   declarations: [
     PagesComponent,

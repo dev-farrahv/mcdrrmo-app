@@ -5,8 +5,20 @@ import { map } from 'rxjs/operators';
 
 export interface User {
     id?: string;
-    name: string;
-    email: string;
+    FirstName: string;
+    MiddleName: string;
+    LastName: string;
+    Address: string;
+    BirthDate: string;
+    MobileNumber: string;
+    EmailAddress: string;
+    DateHired: string;
+    Station: number;
+    Position: string;
+    Role: string;
+    MobileOnly: boolean;
+    WebAdmin: boolean;
+    LocatorAccess: boolean;
   }
 
 @Injectable({
@@ -42,8 +54,8 @@ export class UserService {
     return this.userCollection.doc(user.id).update(user);
   }
 
-  addUser(user: any) {
-    return this.userCollection.doc(user.id).set(user);
+  addUser(user: User) {
+    return this.userCollection.add(user);
   }
 
   removeUser(id) {

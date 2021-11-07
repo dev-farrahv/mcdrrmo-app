@@ -11,6 +11,23 @@ import { User, UserService } from '../../shared/services/user.service';
   styleUrls: ['./manageusers.component.scss']
 })
 export class ManageusersComponent {
+  user: User = {
+    id: '',
+    FirstName: '',
+    MiddleName: '',
+    LastName: '',
+    Address: '',
+    BirthDate: '',
+    MobileNumber: '',
+    EmailAddress: '',
+    DateHired: '',
+    Station: 0,
+    Position: '',
+    Role: '',
+    MobileOnly: false,
+    WebAdmin: false,
+    LocatorAccess: false,
+  };
 
   settings = {
     edit: {
@@ -86,9 +103,6 @@ export class ManageusersComponent {
   }
 
   ngOnInit() {
-    console.log("hi");
-    console.log(this.userService.getuser);
-
     this.userService.getuser().subscribe((res) => {
       console.log(res);
     });
